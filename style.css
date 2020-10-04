@@ -1,0 +1,108 @@
+:root {
+    --dark: #182a38;
+    --light: #63bbff;
+    --start: #2ec75e;
+    --restart: #c72e33;
+
+    --grid-rows: 1;
+    --grid-cols: 1;
+}
+html {
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#app {
+    display: grid;
+    grid-template-rows: 10vh 20vh 70vh;
+    grid-template-areas:
+    "header"
+    "controls"
+    "board";
+    background: var(--light);
+}
+#header {
+    grid-area: header;
+    text-align: center;
+    background: var(--dark);
+    color: white;
+}
+#header > h1 {
+    vertical-align: middle;
+    line-height: 10vh;
+    font-size: 2.6rem;
+}
+#controls {
+    width: 80%;
+    margin: 0 auto;
+    grid-area: controls;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+        "color"
+        "size"
+        "game";
+    justify-items: center;
+    align-items: center;
+}
+#color-selection {
+    grid-area: color;
+    width: 100%;
+}
+#color {
+    width: 100%;
+    font-size: 1.6rem;
+}
+#size-selection {
+    grid-area: size;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+#game-control {
+    grid-area: game;
+    width: 100%;
+}
+#gameboard {    
+    margin: 5%;
+    border: 2px solid var(--dark);
+    background: white;
+    display: grid;
+    grid-template-columns: repeat(var(--grid-cols), 1fr);
+    grid-template-rows: repeat(var(--grid-rows), 1fr);
+}
+
+.btn {
+    border: none;
+    border-radius: 10%;
+    box-shadow: 0 0 5px var(--dark);
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+.btn-start {
+    background: var(--start);
+    width: 100%;
+}
+.btn-restart {
+    background: var(--restart);
+    width: 100%;
+}
+.active {
+    background: var(--dark);
+    color: white;
+}
+.show {
+    display: block;
+}
+.hide {
+    display: none;
+}
+.grid-cell {
+    border: 1px solid var(--dark);
+}

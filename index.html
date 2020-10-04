@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="index.js"></script>
+    <title>Etch-A-Sketch</title>
+</head>
+<body>
+    <div id="app">
+        <div id="header">
+            <h1>Etch-A-Sketch</h1>
+        </div>
+        <div id="controls">
+            <div id="color-selection">
+                <select id="color">
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                    <option value="black">Black</option>
+                    <option value="random">Random</option>
+                </select>
+            </div>
+            <div id="size-selection">
+                <button type="button" class="btn" id="sixteen-btn">16x16</button>
+                <button type="button" class="btn" id="thirtyTwo-btn">32x32</button>
+            </div>
+            <div id="game-control">
+                <button type="button" class="btn btn-start" id="start">Start</button>
+                <button type="button" class="btn btn-restart hide" id="restart">Restart</button>
+            </div>
+        </div>
+
+        <div id="gameboard">
+
+        </div>
+    </div>
+</body>
+</html>
